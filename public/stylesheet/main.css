@@ -15,14 +15,6 @@
    box-sizing: inherit;
 }
 
-.border {
-   border: 1px solid #6B73D1;
-}
-
-.border.red {
-   border: 1px solid red;
-}
-
 html,
 body {
    box-sizing: border-box;
