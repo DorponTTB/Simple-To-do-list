@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Secular+One&family=Shippori+Antique+B1&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   line-height: 1.6;
+   color: rgb(249, 249, 249);
+   -webkit-tap-highlight-color: transparent !important;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+.border {
+   border: 1px solid #6B73D1;
+}
+
+.border.red {
+   border: 1px solid red;
+}
+
+html,
+body {
+   box-sizing: border-box;
+   font-size: 16px;
+   font-family: 'Shippori Antique B1', sans-serif;
+   background-color: rgb(26, 35, 46);
+}
+
+::-webkit-resizer {
+   display: none;
+}
+
+.wrapper {
+   max-width: 86vw;
+   margin: 0 auto;
+}
+
+header {
+   position: sticky;
+   top: -1.37rem;
+   width: 100%;
+   background-color: rgb(8, 15, 23);
+   z-index: 999;
+   box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.26);
+}
+
+header h1 {
+   color: #fff;
+   padding: 1.9rem 0 0.1rem;
+   text-align: left;
+   text-transform: capitalize;
+   font-size: 3rem;
+   font-family: 'Secular One', sans-serif;
+}
+
+header p {
+   margin-bottom: 2.46rem;
+   color: #73BEF3;
+   text-align: left;
+   line-height: 1.9;
+   font-size: 1.14rem;
+   font-weight: 400;
+   font-family: 'Secular One', sans-serif;
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-around;
+   margin: 0 auto;
+   max-width: 100%;
+   list-style: none;
+}
+
+nav li {
+   flex-basis: 33.333%;
+   text-align: center;
+}
+
+nav .item {
+   display: block;
+   padding: 0.59em 0.28em;
+   color: rgba(243, 243, 243, 0.86);
+   text-transform: capitalize;
+   font-size: 0.85rem;
+   font-family: 'POPPINS', sans-serif;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+nav .active.item {
+   color: #0090ff;
+   font-size: 0.876rem;
+   border-bottom: 0.17rem solid #0090ff;
+}
+
+main {
+   border-top: 0.91px solid rgba(244, 244, 244, 0.68);
+}
+
+section[aria-label^="organize"] > .item {
+   margin-top: 2.56rem;
+   display: none;
+}
+
+section[aria-label^="organize"] > .active {
+   display: block;
+}
+
+.segment {
+   padding: 0.97em 0.89rem;
+   border-radius: 0.424rem;
+   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.17);
+   width: 100%;
+   font-family: inherit;
+   background-color: rgb(11, 19, 29);
+   font-size: 0.826rem;
+}
+
+.add-new-task form {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1.2rem;
+}
+
+.add-new-task .segment {
+   outline: none;
+   border: none;
+   resize: vertical;
+   min-height: 8rem;
+   max-height: 29rem;
+   transition:
+      box-shadow 240ms ease-in-out,
+      border 240ms ease-in-out;
+   cursor: text;
+}
+
+.add-new-task .segment:hover,
+.add-new-task .segment:focus {
+   box-shadow:
+      0 0 0 1.26px #3094dd,
+      0 0 4.46px 2.2px #007ddd,
+      0 0 10px 3px rgba(0, 0, 0, 0.17);
+}
+
+.add-new-task button {
+   padding: 0.46em 0.98em;
+   width: 8em;
+   border: none;
+   border-radius: 0.424rem;
+   text-transform: capitalize;
+   font-size: 0.917rem;
+   font-weight: 500;
+   background: rgb(9, 12, 16);
+   background: linear-gradient(90deg,
+      #165cff,
+      #0066ff,
+      #006fff,
+      #0078ff,
+      #0080ff,
+      #0088ff,
+      #0090ff,
+      #0197ff
+   );
+   box-shadow: 3px 8px 13px 3px rgba(0, 0, 0, 0.19);
+   cursor: pointer;
+}
+
+.add-new-task button:hover {
+   background: rgb(12, 4, 203);
+   background: linear-gradient(90deg,
+      #166eff,
+      #146cff,
+      #1369ff,
+      #1267ff,
+      #1264ff,
+      #1361ff,
+      #145fff,
+      #165cff
+   );
+   box-shadow: 3px 8px 13.5px 3px rgba(0, 0, 0, 0.29);
+} 
+
+.add-new-task button:active {
+   box-shadow: 3.4px 8.7px 13.5px 4px rgba(0, 0, 0, 0.39);
+}
+
+.accordion.shrinked {
+   padding-left: 1.6rem;
+   flex-basis: 55.9%;
+   color: inherit;
+   background: url(../../public/icons/accordion_arrow.png) no-repeat;
+   background-size: 0.87rem;
+   background-position: 0 0.44rem;
+   font-size: 1.05rem;
+   font-family: inherit;
+   text-align: left;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   cursor: pointer;
+}
+
+.accordion.shrinked > span {
+   font-size: 0.98rem;
+   color: rgba(248, 248, 248, 0.9);
+}
+
+.actions {
+   margin-left: 2rem;
+   height: 1.5rem;
+   display: flex;
+   align-items: center;
+}
+
+.actions button {
+   transform: scale(5.54);
+   margin: 0 0.58rem 0.05rem 0;
+}
+
+.to-do-tasks .segment, .completed-tasks .segment {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: rgb(248, 248, 248);;
+}
+
+.to-do-tasks .actions {
+   flex-basis: 3.55rem;
+   justify-content: space-between;
+   background:
+      url(../../public/icons/checkbox.png) no-repeat,
+      url(../../public/icons/bin.png) no-repeat;
+   background-size: 1.13rem, 1.01rem;
+   background-position: left 0.11rem /*-2.574rem*/, right -0.03rem /*-2.16rem*/; 
+}
+
+.to-do-tasks input[type="checkbox"] {
+   transform: scale(1.76);
+   margin: 0.05rem 0 0 0.24rem;
+   visibility: hidden;
+}
+
+.to-do-tasks button {
+   visibility: hidden;
+}
+
+.completed-tasks .accordion.shrinked {
+   flex-basis: 66.9%;
+}
+
+.completed-tasks .accordion.shrinked > span {
+   text-decoration: line-through;
+}
+
+.completed-tasks .actions {
+   flex-basis: 1.2rem;
+   background: url(../../public/icons/bin.png) no-repeat;
+   background-size: 1.01rem;
+   background-position: right -0.03rem /*-2.16rem*/; 
+}
+
+.completed-tasks button {
+   margin-left: 1rem;
+   visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+   .wrapper {
+      max-width: 600px;
+   }
+}
