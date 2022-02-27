@@ -1,14 +1,52 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title></title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Simple To-Do List</title>
 </head>
-
 <body>
-
+   <header>
+      <div class="wrapper">
+         <h1>To-do list</h1>
+         <p>A simple To-Do list website built with HTML, CSS, TypeScript.</p>
+         <nav>
+            <ul>
+               <li><a class="active item" href="#add-task">New task</a></li>
+               <li><a class="item" href="#tasks">To-do tasks</a></li>
+               <li><a class="item" href="#completed">Completed</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class="wrapper">
+         <section aria-label="organize work">
+            <div class="active item add-new-task" id="add-task">
+               <form action="" method="get">
+                  <textarea class="segment" value="Finish this to-do list website" placeholder="What do you want to do?"></textarea>
+                  <button type="submit" name="add-new-button">Add new</button>
+               </form>
+            </div>
+            <div class="item to-do-tasks" id="tasks">
+               <div class="segment">
+                  <div class="accordion shrinked">Task 1 - <span>Finish this to-do list website</span></div>
+                  <div class="actions">
+                     <input name="checkbox" type="checkbox">
+                     <button type="button"></button>
+                  </div>
+               </div>
+            </div>
+            <div class="item completed-tasks" id="completed">
+               <div class="segment">
+                  <div class="accordion shrinked">Completed - <span>Finish this to-do list website</span></div>
+                  <div class="actions">
+                     <button type="button"></button>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
 </body>
-
 </html>
