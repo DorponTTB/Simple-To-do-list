@@ -38,6 +38,10 @@ header {
    width: 100%;
    background-color: rgb(8, 15, 23);
    z-index: 999;
+   -o-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.26);
+   -ms-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.26);
+   -moz-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.26);
+   -webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.26);
    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.26);
 }
 
@@ -82,6 +86,22 @@ nav .item {
    font-family: 'POPPINS', sans-serif;
    font-weight: 600;
    cursor: pointer;
+   transition: font-size 100ms ease, color 100ms ease;
+}
+
+nav .item:hover {
+	animation-name: highlight;
+	animation-duration: 310ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+
+@keyframes highlight {
+	0%{ background: rgba(25, 147, 255, 0.37) }
+	52%{ background: rgba(25, 147, 255, 0.26) }
+	67%{ background: rgba(25, 147, 255, 0.17) }
+	80%{ background: rgba(25, 147, 255, 0.08) }
+	100%{ background: transparent; }
 }
 
 nav .active.item {
@@ -104,8 +124,14 @@ section[aria-label^="organize"] > .active {
 }
 
 .segment {
+   position: relative;
+	 margin-bottom: 0.93rem;
    padding: 0.97em 0.89rem;
    border-radius: 0.424rem;
+   -o-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.17);
+   -ms-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.17);
+   -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.17);
+   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.17);
    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.17);
    width: 100%;
    font-family: inherit;
@@ -113,10 +139,27 @@ section[aria-label^="organize"] > .active {
    font-size: 0.826rem;
 }
 
+.error-message {
+	display: none;
+	margin-bottom: 0.65rem;
+	padding: 0.1em 0 0 1.4em;
+	color: rgb(243, 86, 119);
+	font-size: 0.89rem;
+	font-weight: 550;
+	font-family: sans-serif;
+	background: url(../../public/icons/error.png) no-repeat;
+	background-size: 0.98rem;
+	background-position: 0.05rem 0.275rem;
+}
+
+.error-message.visible {
+	display: block;
+}
+
 .add-new-task form {
    display: flex;
    flex-direction: column;
-   row-gap: 1.2rem;
+   row-gap: 0.21rem;
 }
 
 .add-new-task .segment {
@@ -133,6 +176,22 @@ section[aria-label^="organize"] > .active {
 
 .add-new-task .segment:hover,
 .add-new-task .segment:focus {
+	 -o-box-shadow:
+      0 0 0 1.26px #3094dd,
+      0 0 4.46px 2.2px #007ddd,
+      0 0 10px 3px rgba(0, 0, 0, 0.17);
+   -ms-box-shadow:
+      0 0 0 1.26px #3094dd,
+      0 0 4.46px 2.2px #007ddd,
+      0 0 10px 3px rgba(0, 0, 0, 0.17);
+   -moz-box-shadow:
+      0 0 0 1.26px #3094dd,
+      0 0 4.46px 2.2px #007ddd,
+      0 0 10px 3px rgba(0, 0, 0, 0.17);
+   -webkit-box-shadow:
+      0 0 0 1.26px #3094dd,
+      0 0 4.46px 2.2px #007ddd,
+      0 0 10px 3px rgba(0, 0, 0, 0.17);
    box-shadow:
       0 0 0 1.26px #3094dd,
       0 0 4.46px 2.2px #007ddd,
@@ -152,12 +211,16 @@ section[aria-label^="organize"] > .active {
       #165cff,
       #0066ff,
       #006fff,
-      #0078ff,
+      #0078ff, 
       #0080ff,
       #0088ff,
       #0090ff,
       #0197ff
    );
+   -o-box-shadow: 3px 8px 13px 3px rgba(0, 0, 0, 0.19);
+   -ms-box-shadow: 3px 8px 13px 3px rgba(0, 0, 0, 0.19);
+   -moz-box-shadow: 3px 8px 13px 3px rgba(0, 0, 0, 0.19);
+   -webkit-box-shadow: 3px 8px 13px 3px rgba(0, 0, 0, 0.19);
    box-shadow: 3px 8px 13px 3px rgba(0, 0, 0, 0.19);
    cursor: pointer;
 }
@@ -174,36 +237,80 @@ section[aria-label^="organize"] > .active {
       #145fff,
       #165cff
    );
+   -o-box-shadow: 3px 8px 13.5px 3px rgba(0, 0, 0, 0.29);
+   -ms-box-shadow: 3px 8px 13.5px 3px rgba(0, 0, 0, 0.29);
+   -moz-box-shadow: 3px 8px 13.5px 3px rgba(0, 0, 0, 0.29);
+   -webkit-box-shadow: 3px 8px 13.5px 3px rgba(0, 0, 0, 0.29);
    box-shadow: 3px 8px 13.5px 3px rgba(0, 0, 0, 0.29);
 } 
 
 .add-new-task button:active {
+	 -o-box-shadow: 3.4px 8.7px 13.5px 4px rgba(0, 0, 0, 0.39);
+   -ms-box-shadow: 3.4px 8.7px 13.5px 4px rgba(0, 0, 0, 0.39);
+   -moz-box-shadow: 3.4px 8.7px 13.5px 4px rgba(0, 0, 0, 0.39);
+   -webkit-box-shadow: 3.4px 8.7px 13.5px 4px rgba(0, 0, 0, 0.39);
    box-shadow: 3.4px 8.7px 13.5px 4px rgba(0, 0, 0, 0.39);
 }
 
+.accordion {
+	padding-left: 1.38rem;
+	max-width: 74%;
+	color: inherit;
+	font-size: 1.05rem;
+	font-family: inherit;
+	text-align: left;
+ 	transition: max-height 300ms ease;
+
+}
+
+.accordion:before {
+	content: '';
+  position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	left: 0.6rem;
+	top: 1.02rem;
+	background: url(../../public/icons/accordion_arrow.png) no-repeat;
+	background-size: 0.89rem;
+	background-position: 0.19rem 0.2rem;
+	transform: rotate(90deg);
+	transition: transform 400ms ease-in-out;
+}
+
+.accordion > span {
+	display: block;
+	margin-top: 0.4rem;
+	font-size: 0.84rem;
+	font-weight: 400;
+	width: 100%;
+	color: rgba(243, 243, 243, 0.86);
+	transform: scaleY(1);
+	transform-origin: top;
+  transition: all 450ms ease;
+}
+
 .accordion.shrinked {
-   padding-left: 1.6rem;
-   flex-basis: 55.9%;
-   color: inherit;
-   background: url(../../public/icons/accordion_arrow.png) no-repeat;
-   background-size: 0.87rem;
-   background-position: 0 0.44rem;
-   font-size: 1.05rem;
-   font-family: inherit;
-   text-align: left;
+	 max-width: 12rem;
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
    cursor: pointer;
+   height: min-content;
+}
+
+.accordion.shrinked:before {
+	transform: rotate(0deg);
 }
 
 .accordion.shrinked > span {
-   font-size: 0.98rem;
+ 	 display: inline;
+   font-size: 0.86rem;
    color: rgba(248, 248, 248, 0.9);
+   transform: scaleY(0);
 }
 
 .actions {
-   margin-left: 2rem;
+   margin-left: 0.8rem;
    height: 1.5rem;
    display: flex;
    align-items: center;
@@ -217,7 +324,6 @@ section[aria-label^="organize"] > .active {
 .to-do-tasks .segment, .completed-tasks .segment {
    display: flex;
    justify-content: space-between;
-   align-items: center;
    color: rgb(248, 248, 248);;
 }
 
@@ -228,21 +334,17 @@ section[aria-label^="organize"] > .active {
       url(../../public/icons/checkbox.png) no-repeat,
       url(../../public/icons/bin.png) no-repeat;
    background-size: 1.13rem, 1.01rem;
-   background-position: left 0.11rem /*-2.574rem*/, right -0.03rem /*-2.16rem*/; 
+   background-position: left 0.11rem /*-2.574rem*/, right -0.03rem /*-2.16rem*/;
 }
 
 .to-do-tasks input[type="checkbox"] {
    transform: scale(1.76);
    margin: 0.05rem 0 0 0.24rem;
-   visibility: hidden;
+   opacity: 0;
 }
 
 .to-do-tasks button {
-   visibility: hidden;
-}
-
-.completed-tasks .accordion.shrinked {
-   flex-basis: 66.9%;
+   opacity: 0;
 }
 
 .completed-tasks .accordion.shrinked > span {
@@ -258,7 +360,7 @@ section[aria-label^="organize"] > .active {
 
 .completed-tasks button {
    margin-left: 1rem;
-   visibility: hidden;
+   opacity: 0;
 }
 
 @media screen and (min-width: 768px) {
