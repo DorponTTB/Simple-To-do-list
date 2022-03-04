@@ -324,7 +324,8 @@ section[aria-label^="organize"] > .active {
 .to-do-tasks .segment, .completed-tasks .segment {
    display: flex;
    justify-content: space-between;
-   color: rgb(248, 248, 248);;
+   color: rgb(248, 248, 248);
+   overflow-wrap: break-word;
 }
 
 .to-do-tasks .actions {
