@@ -4,9 +4,9 @@ export class ListTemplate {
     }
     render(taskName) {
         const segment = document.createElement("div");
-        segment.classList.add("segment");
+        segment.className = "segment";
         const accordion = document.createElement("div");
-        accordion.classList.add("accordion", "shrinked");
+        accordion.className = "accordion shrinked";
         if (this.tab.classList.contains("to-do-tasks")) {
             accordion.innerText = "Task - ";
         }
@@ -18,7 +18,7 @@ export class ListTemplate {
         span.innerText = taskName;
         accordion.append(span);
         const actions = document.createElement("div");
-        actions.classList.add("actions");
+        actions.className = "actions";
         segment.append(actions);
         const button = document.createElement("button");
         const input = document.createElement("input");

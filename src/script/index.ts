@@ -6,7 +6,7 @@ const tabSwitcher = document.querySelectorAll<HTMLAnchorElement>("nav a.item"),
 tabSwitcher.forEach((ele: HTMLAnchorElement, index: number) => {
 	ele.addEventListener("click", (e: Event) => {
 		e.preventDefault();
-
+    
 		(document.querySelector("nav .active") as HTMLAnchorElement).classList.remove("active");
 		(document.querySelector('section[aria-label^="organize"] > .active') as HTMLDivElement).classList.remove("active");
 
@@ -51,7 +51,7 @@ todoTasksTab.addEventListener("click", (e) => {
 	
 	if (checkbox.type !== "checkbox") return;
 	
-	checkbox.closest(".actions").style.backgroundPositionY = "-2.574rem, -0.03rem";
+	(checkbox.closest(".actions") as HTMLDivElement).style.backgroundPositionY = "-2.574rem, -0.03rem";
 	
 	const segment = checkbox.closest(".segment") as HTMLDivElement;
   
